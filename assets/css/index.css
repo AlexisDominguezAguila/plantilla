@@ -9,6 +9,47 @@ body {
   background-color: #f8f9fa;
 }
 
+.navbar-brand img {
+  transition: transform 0.2s;
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-navbar);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.2s, background 0.2s;
+
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--text-active-navbar);
+  background-color: --;
+  transition: color 0.2s, border-bottom-color 0.2s;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--text-active-navbar);
+  border-bottom: 2px solid #09490c;
+  transition: color 0.2s, border-bottom-color 0.2s;
+}
+.btn-outline-light {
+  border-width: 2px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline-light {
+  background: var(--fondo-btn-navbar);
+  color: var(--text-btn-navbar);
+  border-color: var(--border-btn-navbar);
+}
+.navbar-toggler {
+  border-color: var(--text-navbar);
+}
+.navbar-toggler-icon {
+  color: var(--text-navbar);
+}
+
 .carousel-section {
   margin: 0;
   padding: 0;
@@ -41,7 +82,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(235, 11, 11, 0.1);
   border-radius: 0.25rem;
   padding: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -49,7 +90,7 @@ body {
 }
 
 .custom-caption:hover {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(235, 11, 11, 0.2);
   transform: translate(-50%, -50%) scale(1.05); /* Mantiene el centrado en hover */
 }
 
@@ -77,10 +118,27 @@ body {
   color: #0d6efd;
   border-color: #fff;
 }
+
+.custom-caption {
+  text-align: left; /* Mueve el texto a la izquierda */
+  align-items: flex-start; /* Alinea contenido a la izquierda */
+}
+
+.custom-caption h5 {
+  font-size: 6rem; /* EDITA AQUÍ el tamaño del título */
+  font-family: "Edu NSW ACT Cursive", cursive; /* EDITA AQUÍ el estilo de fuente */
+}
+
+.custom-caption p {
+  font-size: 1.8rem; /* EDITA AQUÍ el tamaño del párrafo */
+  font-family: "Arial", sans-serif; /* EDITA AQUÍ el estilo de fuente */
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 100%;
   width: 100%;
+  background: rgba(0, 0, 0, 0);
   background-size: 30%;
   background-position: center;
 }
