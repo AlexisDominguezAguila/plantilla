@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  color: #33373a;
+  background-color: #f8f9fa;
 }
 :root {
   --fondo-navbar: #e4e4e6;
@@ -58,78 +62,82 @@
 .navbar-toggler-icon {
   color: var(--text-navbar);
 }
+
+/*SECCION DEL CARRUSEL*/
 .carousel-section {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .carousel {
-    height: 100vh;
+  height: 100vh;
 }
 
-
 .carousel-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .custom-caption {
-    position: absolute;
-    top: 49%;
-    left: 50%; /* Añadido para centrado horizontal */
-    transform: translate(-50%, -50%); /* Centra tanto horizontal como verticalmente */
-    bottom: auto; /* Anula posición inferior de Bootstrap */
-    max-width: 1200px; /* EDITA AQUÍ el ancho máximo */
-    width: 90%; /* Ancho responsivo */
-    min-height: 400px; /* EDITA AQUÍ la altura mínima */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 0.25rem;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: background 0.2s, transform 0.2s;
+  position: absolute;
+  top: 49%;
+  left: 50%; /* Añadido para centrado horizontal */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Centra tanto horizontal como verticalmente */
+  bottom: auto; /* Anula posición inferior de Bootstrap */
+  max-width: 1200px; /* EDITA AQUÍ el ancho máximo */
+  width: 90%; /* Ancho responsivo */
+  min-height: 400px; /* EDITA AQUÍ la altura mínima */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s, transform 0.2s;
 }
 
 .custom-caption:hover {
-    background: rgba(0, 0, 0, 0.7);
-    transform: translate(-50%, -50%) scale(1.05); /* Mantiene el centrado en hover */
+  background: rgba(0, 0, 0, 0.7);
+  transform: translate(-50%, -50%) scale(1.05); /* Mantiene el centrado en hover */
 }
 
 .custom-caption h5 {
-    color: #fff;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
 }
 
 .custom-caption p {
-    color: #fff;
-    margin-bottom: 1rem;
+  color: #fff;
+  margin-bottom: 1rem;
 }
 
 .custom-caption .btn-outline-light {
-    border-width: 2px;
-    font-weight: 500;
-    color: #fff;
-    transition: background 0.2s, color 0.2s;
+  border-width: 2px;
+  font-weight: 500;
+  color: #fff;
+  transition: background 0.2s, color 0.2s;
 }
 
 .custom-caption .btn-outline-light:hover {
-    background: #fff;
-    color: #0d6efd;
-    border-color: #fff;
+  background: #fff;
+  color: #0d6efd;
+  border-color: #fff;
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    height: 100%;
-    width: 100%;
-    background-size: 30%;
-    background-position: center;
+  height: 100%;
+  width: 100%;
+  background-size: 30%;
+  background-position: center;
 }
 
 @media (max-width: 991.98px) {
@@ -141,18 +149,16 @@
     width: 100%;
     margin-top: 0.5rem;
   }
-    .custom-caption {
-      max-width: 80%; /* EDITA AQUÍ el ancho máximo para pantallas pequeñas */
-      min-height: 120px; /* EDITA AQUÍ la altura mínima para pantallas pequeñas */
-      padding: 0.75rem; 
+  .custom-caption {
+    max-width: 80%; /* EDITA AQUÍ el ancho máximo para pantallas pequeñas */
+    min-height: 120px; /* EDITA AQUÍ la altura mínima para pantallas pequeñas */
+    padding: 0.75rem;
   }
 
-    .custom-caption .btn-outline-light {
-        width: 100%;
-        margin-top: 0.5rem;
+  .custom-caption .btn-outline-light {
+    width: 100%;
+    margin-top: 0.5rem;
   }
-
-  
 }
 
 /*SECCION SOBRE NOSOTROS*/
@@ -160,16 +166,15 @@
   background: #fff;
   border-radius: 1.5rem;
   box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
-  padding: 2.5rem 2rem;
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
 .nosotros-card h2 {
-  font-family: "Funnel Sans", sans-serif !important;
-  font-optical-sizing: auto;
-  font-style: normal;
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-weight: normal;
+  font-size: 2.5rem;
   color: #2e7d32;
   font-weight: 700;
   letter-spacing: 0.5px;
