@@ -8,19 +8,6 @@ body {
   color: #33373a;
   background-color: #f8f9fa;
 }
-:root {
-  --fondo-navbar: #e4e4e6;
-  --text-navbar: #2e7d32;
-  --text-active-navbar: #191a19;
-  --fondo-btn-navbar: transparent;
-  --text-btn-navbar: #09490c;
-  --border-btn-navbar: var(--text-navbar);
-}
-.navbar {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 0.5rem 0;
-  background-color: var(--fondo-navbar) !important;
-}
 
 .navbar-brand img {
   transition: transform 0.2s;
@@ -63,14 +50,16 @@ body {
   color: var(--text-navbar);
 }
 
-
 .carousel-section {
   margin: 0;
   padding: 0;
 }
 
 .carousel {
+
   height: 75vh;
+
+  height: 90vh;
 }
 
 .carousel-img {
@@ -134,18 +123,18 @@ body {
 }
 
 .custom-caption {
-    text-align: left; /* Mueve el texto a la izquierda */
-    align-items: flex-start; /* Alinea contenido a la izquierda */
+  text-align: left; /* Mueve el texto a la izquierda */
+  align-items: flex-start; /* Alinea contenido a la izquierda */
 }
 
 .custom-caption h5 {
-    font-size: 6rem; /* EDITA AQUÍ el tamaño del título */
-    font-family: "Edu NSW ACT Cursive", cursive; /* EDITA AQUÍ el estilo de fuente */
+  font-size: 6rem; /* EDITA AQUÍ el tamaño del título */
+  font-family: "Edu NSW ACT Cursive", cursive; /* EDITA AQUÍ el estilo de fuente */
 }
 
 .custom-caption p {
-    font-size: 1.8rem; /* EDITA AQUÍ el tamaño del párrafo */
-    font-family: 'Arial', sans-serif; /* EDITA AQUÍ el estilo de fuente */
+  font-size: 1.8rem; /* EDITA AQUÍ el tamaño del párrafo */
+  font-family: "Arial", sans-serif; /* EDITA AQUÍ el estilo de fuente */
 }
 
 .carousel-control-prev-icon,
@@ -178,6 +167,7 @@ body {
   }
 }
 
+/*SECCION DE NOSOTROS*/
 
 .nosotros-card {
   background: #fff;
