@@ -56,6 +56,9 @@ body {
 }
 
 .carousel {
+
+  height: 75vh;
+
   height: 90vh;
 }
 
