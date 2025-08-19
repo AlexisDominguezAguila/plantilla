@@ -5,7 +5,7 @@
 }
 
 :root {
-  --fondo-navbar: #e4e4e6;
+  --fondo-navbar: #ffffff;
   --text-navbar: #2e7d32;
   --text-active-navbar: #191a19;
   --fondo-btn-navbar: transparent;
@@ -16,10 +16,6 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   padding: 0.5rem 0;
   background-color: var(--fondo-navbar) !important;
-}
-
-.navbar-brand img {
-  transition: transform 0.2s;
 }
 
 .navbar-nav .nav-link {
