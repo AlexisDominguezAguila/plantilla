@@ -6,7 +6,7 @@
 }
 body {
   color: #33373a;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
 }
 
 .navbar-brand img {
@@ -56,9 +56,8 @@ body {
 }
 
 .carousel {
-
   height: 75vh;
-  }
+}
 
 .carousel-img {
   height: 100%;
@@ -168,9 +167,7 @@ body {
 /*SECCION DE NOSOTROS*/
 
 .nosotros-card {
-  background: #fff;
   border-radius: 1.5rem;
-  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
   display: flex;
   align-items: center;
   gap: 2rem;
