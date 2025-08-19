@@ -82,7 +82,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: rgba(235, 11, 11, 0.03);
+  background: rgba(0, 0, 0, 0.02);
   border-radius: 0.25rem;
   padding: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -90,7 +90,7 @@ body {
 }
 
 .custom-caption:hover {
-  background: rgba(235, 11, 11, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   transform: translate(-50%, -50%) scale(1.05); /* Mantiene el centrado en hover */
 }
 
