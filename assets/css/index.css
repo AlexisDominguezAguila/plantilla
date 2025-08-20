@@ -211,15 +211,6 @@ body {
   gap: 2rem;
 }
 
-.nosotros-card h2 {
-  font-family: "Roboto", sans-serif;
-
-  font-size: 2.5rem;
-  color: #2e7d32;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
 .nosotros-card p {
   color: #33373a;
   font-size: 1.1rem;
@@ -233,9 +224,25 @@ body {
     gap: 1.5rem;
   }
 }
+.btn-nosotros {
+  background-color: rgb(239, 180, 67);
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-nosotros:hover {
+  background-color: #69b517;
+  color: #fff;
+}
 
 :root {
-  --color-bg-card: #ffffff;
+  --color-bg-card: #d4ffba;
   --color-text-primary: #255946;
   --color-text-light: #ffffff;
   --color-bg-overlay: transparent;
@@ -243,17 +250,16 @@ body {
   --color-btn-border: #ffffff;
   --color-btn-hover-bg: #ffffff;
   --color-btn-hover-text: #000000;
-  --shadow-card: 0 4px 8px rgba(0, 0, 0, 0.1);
   --hover-green-tint: #69b517ab;
 }
 
 /* SECCION DE SERVICIOS */
+
 .card-service {
   position: relative;
   width: 350px;
-  height: 350px;
+  height: 370px;
   background-color: var(--color-bg-card);
-  box-shadow: var(--shadow-card);
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
@@ -292,7 +298,6 @@ body {
   clip-path: polygon(40% 0, 49% 9%, 58% 0, 100% 0, 100% 99%, 0 100%, 0 0);
 }
 
-/* overlay verde */
 .body-card::after {
   content: "";
   position: absolute;
@@ -343,30 +348,25 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover activa la animación */
 .card-service:hover .bottom-card {
   bottom: 0;
 }
 
-/* Imagen con overlay verde en hover */
 .card-service:hover .body-card::after {
   background-color: var(--hover-green-tint);
 }
 
-/* Botón hover */
 .card-btn:hover {
   color: var(--color-btn-hover-text);
   background-color: var(--color-btn-hover-bg);
 }
 
-/* Efecto hover general */
 .card-service:hover {
   background-color: var(--color-bg-hover);
   color: var(--color-text-light);
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Cambiar color del título en hover */
 .card-service:hover .top-card {
   background-color: var(--color-bg-hover);
 }
@@ -376,7 +376,6 @@ body {
   transition: color 0.3s ease;
 }
 
-/* Cambiar texto del contenido */
 .card-service:hover .card-content {
   color: var(--color-text-light);
 }
@@ -414,4 +413,104 @@ body {
 }
 .text-green {
   color: #69b517;
+}
+
+/* Nuestro producto */
+.container-fluid {
+  padding: 2rem 0;
+}
+
+/* Fondo verde con pasto */
+.card-prod {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  height: 380px;
+  min-height: 380px;
+  background-color: #69b517;
+  background-image: url("../../images/productodestacado.webp");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  padding: 2rem 3rem;
+  position: relative;
+  overflow: visible;
+}
+
+/* Texto */
+.text-content {
+  flex: 1 1 40%;
+  color: #fff;
+  margin-left: 4rem;
+}
+
+.text-content h3 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-comprar {
+  background-color: #fff;
+  color: #69b517;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-comprar:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Imagen sobresaliendo hacia arriba */
+.image-content {
+  flex: 1 1 45%;
+  text-align: center;
+  position: relative;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+
+  position: relative;
+  top: -80px;
+}
+
+/* En móviles*/
+@media (max-width: 768px) {
+  .card-prod {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .image-content img {
+    top: 0;
+    max-width: 80%;
+    margin: 1.5rem auto 0;
+    display: block;
+  }
+
+  .text-content {
+    margin-left: 0;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .text-content h3 {
+    font-size: 2rem;
+  }
 }
