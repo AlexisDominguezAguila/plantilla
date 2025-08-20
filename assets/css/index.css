@@ -9,47 +9,6 @@ body {
   background-color: #ffffff;
 }
 
-.navbar-brand img {
-  transition: transform 0.2s;
-}
-
-.navbar-nav .nav-link {
-  color: var(--text-navbar);
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: color 0.2s, background 0.2s;
-
-  padding: 0.5rem 1rem;
-}
-
-.navbar-nav .nav-link.active {
-  color: var(--text-active-navbar);
-  background-color: --;
-  transition: color 0.2s, border-bottom-color 0.2s;
-}
-.navbar-nav .nav-link:hover {
-  color: var(--text-active-navbar);
-  border-bottom: 2px solid #09490c;
-  transition: color 0.2s, border-bottom-color 0.2s;
-}
-.btn-outline-light {
-  border-width: 2px;
-  font-weight: 500;
-  transition: background 0.2s, color 0.2s;
-}
-
-.btn-outline-light {
-  background: var(--fondo-btn-navbar);
-  color: var(--text-btn-navbar);
-  border-color: var(--border-btn-navbar);
-}
-.navbar-toggler {
-  border-color: var(--text-navbar);
-}
-.navbar-toggler-icon {
-  color: var(--text-navbar);
-}
-
 .carousel-section {
   margin: 0;
   padding: 0;
@@ -179,27 +138,6 @@ body {
   background: rgba(0, 0, 0, 0);
   background-size: 30%;
   background-position: center;
-}
-
-@media (max-width: 991.98px) {
-  .navbar-nav .nav-link {
-    margin-bottom: 0.5rem;
-    padding: 0.5rem 0.75rem;
-  }
-  .btn-outline-light {
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-  .custom-caption {
-    max-width: 100%;
-    min-height: 100%;
-    padding: 0.75rem;
-  }
-
-  .custom-caption .btn-outline-light {
-    width: 100%;
-    margin-top: 0.5rem;
-  }
 }
 
 /*SECCION DE NOSOTROS*/
