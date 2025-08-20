@@ -85,10 +85,7 @@ body {
   position: absolute;
   top: 49%;
   left: 50%;
-  transform: translate(
-    -50%,
-    -50%
-  );
+  transform: translate(-50%, -50%);
   bottom: auto;
   max-width: 120%;
   width: 90%;
@@ -149,7 +146,6 @@ body {
   font-size: 1.8rem;
   font-family: "Arial", sans-serif;
 }
-
 
 @media (max-width: 1024px) {
   .custom-caption h5 {
@@ -236,4 +232,175 @@ body {
     padding: 1.5rem 1rem;
     gap: 1.5rem;
   }
+}
+
+:root {
+  --color-bg-card: #ffffff;
+  --color-text-primary: #255946;
+  --color-text-light: #ffffff;
+  --color-bg-overlay: transparent;
+  --color-bg-hover: rgb(239, 180, 67);
+  --color-btn-border: #ffffff;
+  --color-btn-hover-bg: #ffffff;
+  --color-btn-hover-text: #000000;
+  --shadow-card: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --hover-green-tint: #69b517ab;
+}
+
+/* SECCION DE SERVICIOS */
+.card-service {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  background-color: var(--color-bg-card);
+  box-shadow: var(--shadow-card);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Encabezado fijo */
+.top-card {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-card);
+  text-align: center;
+}
+.top-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+/* Fondo con imagen */
+.body-card {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 80px);
+  overflow: hidden;
+  clip-path: polygon(40% 0, 49% 9%, 58% 0, 100% 0, 100% 99%, 0 100%, 0 0);
+}
+
+.body-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  clip-path: polygon(40% 0, 49% 9%, 58% 0, 100% 0, 100% 99%, 0 100%, 0 0);
+}
+
+/* overlay verde */
+.body-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+  transition: background-color 0.4s ease;
+}
+
+/* Bottom oculto inicialmente */
+.bottom-card {
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  height: calc(100% - 80px);
+  background-color: var(--color-bg-overlay);
+  transition: bottom 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-content {
+  text-align: center;
+  color: var(--color-text-light);
+  padding: 20px;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.card-txt {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.card-btn {
+  font-size: 13px;
+  margin-top: 20px;
+  text-decoration: none;
+  color: var(--color-text-light);
+  background-color: transparent;
+  border: solid 2px var(--color-btn-border);
+  border-radius: 15px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover activa la animación */
+.card-service:hover .bottom-card {
+  bottom: 0;
+}
+
+/* Imagen con overlay verde en hover */
+.card-service:hover .body-card::after {
+  background-color: var(--hover-green-tint);
+}
+
+/* Botón hover */
+.card-btn:hover {
+  color: var(--color-btn-hover-text);
+  background-color: var(--color-btn-hover-bg);
+}
+
+/* Efecto hover general */
+.card-service:hover {
+  background-color: var(--color-bg-hover);
+  color: var(--color-text-light);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Cambiar color del título en hover */
+.card-service:hover .top-card {
+  background-color: var(--color-bg-hover);
+}
+
+.card-service:hover .top-card h3 {
+  color: var(--color-text-light);
+  transition: color 0.3s ease;
+}
+
+/* Cambiar texto del contenido */
+.card-service:hover .card-content {
+  color: var(--color-text-light);
+}
+.card-content {
+  text-align: center;
+  color: var(--color-text-light);
+  padding: 20px;
+}
+
+.card-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+  display: block;
+  color: var(--color-text-light);
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.card-txt {
+  font-size: 14px;
+  line-height: 1.5;
 }
