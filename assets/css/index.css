@@ -404,3 +404,14 @@ body {
   font-size: 14px;
   line-height: 1.5;
 }
+
+/*titulos*/
+.titulo-home {
+  font-size: 3rem;
+  color: #255946;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.text-green {
+  color: #69b517;
+}
