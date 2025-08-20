@@ -26,7 +26,7 @@
 
 .scroll div {
   white-space: nowrap;
-  animation: animate 15s linear infinite;
+  animation: animate 28s linear infinite;
 }
 
 @keyframes animate {

@@ -65,6 +65,22 @@ body {
   object-fit: cover;
 }
 
+@media (max-width: 1024px) {
+  .carousel {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel {
+    height: 20vh;
+  }
+
+  .carousel-img {
+    object-fit: cover;
+  }
+}
+
 .custom-caption {
   position: absolute;
   top: 49%;
@@ -74,9 +90,9 @@ body {
     -50%
   ); /* Centra tanto horizontal como verticalmente */
   bottom: auto; /* Anula posición inferior de Bootstrap */
-  max-width: 1200px; /* EDITA AQUÍ el ancho máximo */
+  max-width: 120%; /* EDITA AQUÍ el ancho máximo */
   width: 90%; /* Ancho responsivo */
-  min-height: 400px; /* EDITA AQUÍ la altura mínima */
+  min-height: 70%; /* EDITA AQUÍ la altura mínima */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,7 +107,7 @@ body {
 
 .custom-caption:hover {
   background: rgba(0, 0, 0, 0.1);
-  transform: translate(-50%, -50%) scale(1.05); /* Mantiene el centrado en hover */
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 .custom-caption h5 {
@@ -120,18 +136,44 @@ body {
 }
 
 .custom-caption {
-  text-align: left; /* Mueve el texto a la izquierda */
-  align-items: flex-start; /* Alinea contenido a la izquierda */
+  text-align: left;
+  align-items: flex-start;
 }
 
 .custom-caption h5 {
-  font-size: 6rem; /* EDITA AQUÍ el tamaño del título */
-  font-family: "Edu NSW ACT Cursive", cursive; /* EDITA AQUÍ el estilo de fuente */
+  font-size: 6rem;
+  font-family: "Edu NSW ACT Cursive", cursive;
 }
 
 .custom-caption p {
-  font-size: 1.8rem; /* EDITA AQUÍ el tamaño del párrafo */
-  font-family: "Arial", sans-serif; /* EDITA AQUÍ el estilo de fuente */
+  font-size: 1.8rem;
+  font-family: "Arial", sans-serif;
+}
+
+
+@media (max-width: 1024px) {
+  .custom-caption h5 {
+    font-size: 4rem;
+  }
+
+  .custom-caption p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .custom-caption {
+    text-align: center;
+    align-items: center;
+  }
+
+  .custom-caption h5 {
+    font-size: 2.5rem;
+  }
+
+  .custom-caption p {
+    font-size: 1.2rem;
+  }
 }
 
 .carousel-control-prev-icon,
@@ -153,8 +195,8 @@ body {
     margin-top: 0.5rem;
   }
   .custom-caption {
-    max-width: 80%; /* EDITA AQUÍ el ancho máximo para pantallas pequeñas */
-    min-height: 120px; /* EDITA AQUÍ la altura mínima para pantallas pequeñas */
+    max-width: 100%;
+    min-height: 100%;
     padding: 0.75rem;
   }
 
