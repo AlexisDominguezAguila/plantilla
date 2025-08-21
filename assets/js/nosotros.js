@@ -2,7 +2,7 @@ const counters = document.querySelectorAll('.counter');
 
   const animateCounter = (counter) => {
     const target = +counter.getAttribute('data-target');
-    const speed = 40;
+    const speed = 60;
     const increment = Math.ceil(target / 100);
 
     const updateCount = () => {

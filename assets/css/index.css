@@ -370,7 +370,7 @@ body {
   min-height: 380px;
   padding: 2rem 3rem;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   z-index: 0;
 }
 
