@@ -7,7 +7,7 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         />
-        <link rel="shortcut icon" href="../images/Logo.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="/images/Logo.webp" type="image/x-icon" />
         <title>L&B | Locales</title>
         <link rel="stylesheet" href="/assets/css/navbar.css" />
         <link rel="stylesheet" href="/assets/css/footer.css" />
@@ -66,10 +66,16 @@
         </div>
         </nav>
 
-
+        
             <div class="row mt-4">
             <!-- Imagen principal con miniaturas usando Carousel de Bootstrap -->
             <div class="col-lg-7 genere">
+
+                <h2 class="titulo-home text-center py-3">
+                Local
+            <span class="text-green">Buenos Aires
+            </h2>
+
                 <div id="carouselSede" class="carousel slide" data-bs-ride="carousel">
                 <!-- Imagen principal -->
                 <div class="carousel-inner rounded shadow conteni">
@@ -106,26 +112,35 @@
             </div>
 
             <!-- Información lateral -->
-            <div class="col-lg-5 mt-4 mt-lg-0 gener">
+            <div class="col-lg-5 mt-4 mt-lg-0 genere">
                 <!-- Horario -->
                 <div class="card-custom">
                 <h6><i class="bi bi-clock"></i> Horario</h6>
                 <p class="mb-1">Lun a Vie: <strong>6AM – 11PM</strong></p>
                 <p class="mb-1">Sáb: <strong>8AM – 6PM</strong></p>
                 <p class="mb-1">Dom/Feriados: <strong>9AM – 3PM</strong></p>
-                <a href="#" class="text-warning">Ver gráfico de asistencia</a>
                 </div>
 
                 <!-- Dirección -->
                 <div class="card-custom">
                 <h6><i class="bi bi-geo-alt"></i> Dirección</h6>
                 <p>Av. Buenos Aires Mz. N Lote. 3 y 4 A.H. 9 Octubre Piura - Sullana - Sullana - 33133 Sullana</p>
-                <a href="#" class="text-warning">Ver mapa</a>
+                <div class="ratio ratio-16x9">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63157.50484987912!2d-80.7131865!3d-4.9038646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9036f5b88a3c1e6b%3A0x1f2f1e6cbdc2b33!2sSullana%2C%20Per%C3%BA!5e0!3m2!1ses!2spe!4v1692200000000!5m2!1ses!2spe" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
                 </div>
 
-                <!-- Botón -->
-                <button class="btn btn-custom w-100">¡Contactanos por whatsapp!</button>
+                                <button class="btn btn-custom w-100">¡Contactanos por whatsapp!</button>
             </div>
+            </div>
+
+
             </div>
 
 

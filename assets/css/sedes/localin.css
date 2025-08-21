@@ -38,10 +38,16 @@
         }
 
         .genere {
-        height: 600px;
+        height: 700px;
         overflow: hidden;
         }
-        .gener {
-        height: 460px;
-        overflow: hidden;
+
+        .titulo-home {
+        font-size: 3rem;
+        color: #66B511;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        }
+        .text-green {
+        color: #FE131E;
         }
