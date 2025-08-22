@@ -1,107 +1,147 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-/* Hero */
-.hero-nosotros {
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+/* CONTENEDOR PRINCIPAL DEL SLIDE */
+.hero-container {
   position: relative;
   height: 80vh;
-  background: url("../../images/slider-1.webp") no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
+  overflow: hidden;
 }
 
-.hero-nosotros .overlay {
+.hero-container img {
+  object-fit: cover;
+}
+
+/* TEXTO SUPERPUESTO EN EL SLIDE */
+.carousel-caption-custom {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  bottom: 20px;
+  left: 20px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+  max-width: 60%;
   height: 100%;
-  background: linear-gradient(
-    to top,
-    rgba(105, 181, 23, 0.7),
-    rgba(0, 0, 0, 0.5)
-  );
-  z-index: 1;
+}
+.titulo-sucursal {
+  font-family: "Anton", sans-serif;
+  font-size: 5rem;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  padding: 0;
 }
 
-.hero-nosotros .hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: 0 1rem;
+/* MAPA SUPERPUESTO */
+.map-overlay {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: 400px;
+  height: 100%;
+  max-width: 35%;
+  z-index: 4;
 }
 
-.hero-nosotros h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-}
-
-.hero-nosotros p {
-  font-size: 1.2rem;
-}
-/*titulos*/
-.titulo-home {
-  font-size: 3rem;
-  color: #255946;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-.text-green {
-  color: #69b517;
-}
-
-/*imagen del mapa*/
-.localesMapa {
-  width: 80%;
+.map-img {
+  width: 100%;
   height: auto;
 }
 
-.mapa-container {
-  position: relative;
-  display: inline-block;
-}
-
+/* PUNTOS DEL MAPA */
 .map-point {
   position: absolute;
   width: 18px;
   height: 18px;
-  background: #28a745; /* verde */
-  border-radius: 50%;
+  background-color: #28a745;
   border: 2px solid #fff;
-  cursor: pointer;
+  border-radius: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 0.2s ease, background 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .map-point:hover {
-  background: #218838;
-  transform: scale(1.2) translate(-50%, -50%);
-  z-index: 2;
+  transform: translate(-50%, -50%) scale(1.2);
+  background-color: #218838;
 }
 
-.map-point .tooltip {
-  position: absolute;
-  bottom: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #333;
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .map-overlay {
+    width: 200px;
+    top: auto;
+    bottom: 20px;
+    right: 10px;
+  }
+
+  .carousel-caption-custom {
+    max-width: 80%;
+    font-size: 0.9rem;
+  }
+}
+
+.carousel-caption-custom a.btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/*sieño de tarjetas */
+/* Contenedor de la tarjeta */
+.card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+}
+
+/* Imagen de la tarjeta */
+.card img {
+  transition: transform 0.4s ease;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Hover de la tarjeta */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Zoom suave en la imagen */
+.card:hover img {
+  transform: scale(1.08);
+}
+
+/* Título */
+.card-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #198754;
+}
+
+/* Texto */
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Botón */
+.card a.btn {
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover del botón */
+.card a.btn:hover {
+  background-color: #145c32;
   color: #fff;
-  padding: 4px 8px;
-  font-size: 0.8rem;
-  border-radius: 4px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.map-point:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
 }
