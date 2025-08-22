@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -353,53 +354,37 @@ body {
   color: #69b517;
 }
 
-/* Nuestro producto */
-.container-fluid {
-  padding: 2rem 0;
-}
-
-/* Fondo verde con pasto */
-.card-prod {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
-  width: 100%;
-  height: 380px;
-  min-height: 380px;
-  padding: 2rem 3rem;
+/* Contenedor principal con fondo animado */
+.contenedor-principal {
   position: relative;
   overflow: hidden;
-  z-index: 0;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
 }
 
-/* Capas de fondo animadas */
-.card-prod .bg {
-  background-image: linear-gradient(
-    -60deg,
-    rgb(76, 184, 22) 50%,
-    rgb(8, 99, 23) 50%
-  );
+/* Fondo animado */
+.bg {
+  animation: slide 18s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #134b23 50%, #09af2d 50%);
   bottom: 0;
   left: -50%;
   opacity: 0.5;
   position: absolute;
   right: -50%;
   top: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
-.card-prod .bg {
-  animation: slide 16s ease-in-out infinite alternate;
-}
-
-.card-prod .bg2 {
+.bg2 {
   animation-direction: alternate-reverse;
   animation-duration: 18s;
 }
 
-.card-prod .bg3 {
+.bg3 {
   animation-duration: 20s;
 }
 
@@ -412,77 +397,81 @@ body {
   }
 }
 
-/* Texto */
-.text-content {
-  flex: 1 1 40%;
-  color: #fff;
-  margin-left: 4rem;
-}
-
-.text-content h3 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-}
-
-.text-content p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.btn-comprar {
-  background-color: #fff;
-  color: #69b517;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-comprar:hover {
-  background-color: #333;
-  color: #fff;
-}
-
-/* Imagen sobresaliendo hacia arriba */
-.image-content {
-  flex: 1 1 45%;
-  text-align: center;
+/* Contenedor gris */
+.contenedor-gris {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 32px 0 rgba(8, 10, 34, 0.295);
+  width: 100%;
+  height: 300px;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  padding: 20px 40px;
+  gap: 20px;
 }
 
-.image-content img {
-  max-width: 100%;
-  height: auto;
-
-  position: relative;
-  top: -80px;
+/* Columna izquierda (texto) */
+.texto-descriptivo {
+  flex: 1;
+  text-align: left;
+  color: #2e2e2e;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0 40px;
 }
 
-/* En móviles*/
+.texto-descriptivo h3 {
+  margin-bottom: 10px;
+  font-size: 4rem;
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Columna derecha (imagen) */
+.imagen-derecha {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-derecha img {
+  max-width: auto;
+  max-height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* --- Versión móvil --- */
 @media (max-width: 768px) {
-  .card-prod {
-    flex-direction: column;
+  .contenedor-principal {
     height: auto;
-    padding: 2rem 1rem;
+    padding: 40px 0;
   }
 
-  .image-content img {
-    top: 0;
-    max-width: 80%;
-    margin: 1.5rem auto 0;
-    display: block;
+  .contenedor-gris {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
   }
 
-  .text-content {
-    margin-left: 0;
-    margin-top: 0;
+  .texto-descriptivo {
     text-align: center;
   }
 
-  .text-content h3 {
+  .texto-descriptivo h3 {
     font-size: 2rem;
+  }
+
+  .imagen-derecha img {
+    max-height: 200px;
   }
 }
