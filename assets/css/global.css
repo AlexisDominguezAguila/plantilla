@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #33373a;
+  background-color: #ffffff;
+}
+/*titulos*/
+.titulo-home {
+  font-size: 3rem !important;
+  color: #255946;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+.text-green {
+  color: #69b517;
+}

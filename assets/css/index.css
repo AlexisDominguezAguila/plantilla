@@ -1,137 +1,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* === SECCIÓN HERO (GENÉRICA) === */
+section {
+  width: 100%;
 }
-body {
-  color: #33373a;
-  background-color: #ffffff;
-}
-
+/* === CARRUSEL GENERAL === */
 .carousel-section {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
-.carousel {
+#heroCarousel {
   height: 75vh;
 }
 
-.carousel-img {
+#heroCarousel .carousel-inner,
+#heroCarousel .carousel-item {
   height: 100%;
+}
+
+.carousel-img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-@media (max-width: 1024px) {
-  .carousel {
-    height: 40vh;
-  }
-}
-
-@media (max-width: 600px) {
-  .carousel {
-    height: 20vh;
-  }
-
-  .carousel-img {
-    object-fit: cover;
-  }
-}
-
+/* === CAPTION === */
 .custom-caption {
   position: absolute;
-  top: 49%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  bottom: auto;
-  max-width: 120%;
   width: 90%;
-  min-height: 70%;
+  height: 90%;
+  max-width: 1200px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.034);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  z-index: 2;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.02);
-  border-radius: 0.25rem;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: background 0.2s, transform 0.2s;
+  gap: 0.8rem;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .custom-caption:hover {
-  background: rgba(0, 0, 0, 0.1);
-  transform: translate(-50%, -50%) scale(1.05);
+  background: rgba(0, 0, 0, 0.164);
+  transform: translate(-50%, -50%) scale(1.03);
 }
 
+/* === TEXTO DEL CAPTION === */
 .custom-caption h5 {
   color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.5rem;
-}
-
-.custom-caption p {
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.custom-caption .btn-outline-light {
-  border-width: 2px;
-  font-weight: 500;
-  color: #fff;
-  transition: background 0.2s, color 0.2s;
-}
-
-.custom-caption .btn-outline-light:hover {
-  background: #fff;
-  color: #0d6efd;
-  border-color: #fff;
-}
-
-.custom-caption {
-  text-align: left;
-  align-items: flex-start;
-}
-
-.custom-caption h5 {
-  font-size: 6rem;
   font-family: "Edu NSW ACT Cursive", cursive;
+  font-weight: 600;
+  font-size: clamp(6rem, 5vw, 3.5rem);
+  letter-spacing: 0.5px;
+  margin: 0;
 }
 
 .custom-caption p {
-  font-size: 1.8rem;
-  font-family: "Arial", sans-serif;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: clamp(1rem, 2vw, 2rem);
+  max-width: 600px;
+  margin: 0;
 }
-
-@media (max-width: 1024px) {
-  .custom-caption h5 {
-    font-size: 4rem;
-  }
-
-  .custom-caption p {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .custom-caption {
-    text-align: center;
-    align-items: center;
-  }
-
-  .custom-caption h5 {
-    font-size: 2.5rem;
-  }
-
-  .custom-caption p {
-    font-size: 1.2rem;
-  }
-}
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 100%;
@@ -141,7 +79,182 @@ body {
   background-position: center;
 }
 
-/*SECCION DE NOSOTROS*/
+/* === TABLET === */
+@media (max-width: 1024px) {
+  #heroCarousel {
+    height: 80vh;
+  }
+
+  .custom-caption {
+    width: 95%;
+    text-align: center;
+    align-items: center;
+    padding: 1.2rem;
+  }
+
+  .custom-caption h5 {
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-size: clamp(4rem, 4vw, 3rem);
+  }
+
+  .custom-caption p {
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+  }
+}
+
+/* === MÓVIL === */
+@media (max-width: 768px) {
+  #heroCarousel {
+    height: 80vh;
+  }
+
+  .custom-caption {
+    width: 90%;
+    padding: 1rem;
+    text-align: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .custom-caption h5 {
+    font-size: clamp(3rem, 5vw, 2.5rem);
+  }
+
+  .custom-caption p {
+    font-size: clamp(0.8rem, 3vw, 1.2rem);
+  }
+}
+
+/* Otras secciones */
+.other-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+/*SECCION DEL PRODUCTOM DE LA EMPRESA*/
+
+.contenedor-principal {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+/* Fondo animado */
+.bg {
+  animation: slide 18s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #134b23 50%, #09af2d 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: absolute;
+  right: -50%;
+  top: 0;
+  z-index: 0;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 18s;
+}
+
+.bg3 {
+  animation-duration: 20s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+/* Contenedor gris */
+.contenedor-gris {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 32px 0 rgba(8, 10, 34, 0.295);
+  width: 100%;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  padding: 20px 40px;
+  gap: 20px;
+}
+
+/* Columna izquierda (texto) */
+.texto-descriptivo {
+  flex: 1;
+  text-align: left;
+  color: #2e2e2e;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0 40px;
+}
+
+.texto-descriptivo h3 {
+  margin-bottom: 10px;
+  font-size: 4rem;
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Columna derecha (imagen) */
+.imagen-derecha {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-derecha img {
+  max-width: auto;
+  max-height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* --- Versión móvil --- */
+@media (max-width: 768px) {
+  .contenedor-principal {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .contenedor-gris {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .texto-descriptivo {
+    text-align: center;
+  }
+
+  .texto-descriptivo h3 {
+    font-size: 2rem;
+  }
+
+  .imagen-derecha img {
+    max-height: 200px;
+  }
+}
+
+/* SECCION RESUMEN DE NOSOTROS */
 
 .nosotros-card {
   border-radius: 1.5rem;
@@ -179,6 +292,8 @@ body {
   background-color: #69b517;
   color: #fff;
 }
+
+/* SECCION DE LOS SERVICIOS*/
 
 :root {
   --color-bg-card: #d4ffba;
@@ -343,135 +458,48 @@ body {
   line-height: 1.5;
 }
 
-/*titulos*/
-.titulo-home {
-  font-size: 3rem;
-  color: #255946;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-.text-green {
-  color: #69b517;
+/*CINTA DE PROVEEDORES**/
+.imgpro {
+  width: 150px;
+  margin: 0 20px;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
-/* Contenedor principal con fondo animado */
-.contenedor-principal {
+.imgpro:not(:hover) {
+  filter: grayscale(100%);
+}
+
+.scroll {
   position: relative;
+  display: flex;
+  width: 100%;
+  background-color: rgb(243, 237, 237);
   overflow: hidden;
-  width: 100%;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #fff 20%,
+    #fff 80%,
+    transparent
+  );
 }
 
-/* Fondo animado */
-.bg {
-  animation: slide 18s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #134b23 50%, #09af2d 50%);
-  bottom: 0;
-  left: -50%;
-  opacity: 0.5;
-  position: absolute;
-  right: -50%;
-  top: 0;
-  z-index: 0;
+.scroll div {
+  white-space: nowrap;
+  animation: animate 28s linear infinite;
 }
 
-.bg2 {
-  animation-direction: alternate-reverse;
-  animation-duration: 18s;
-}
-
-.bg3 {
-  animation-duration: 20s;
-}
-
-@keyframes slide {
+@keyframes animate {
   0% {
-    transform: translateX(-25%);
+    transform: translateX(0);
   }
+
   100% {
-    transform: translateX(25%);
+    transform: translateX(-100%);
   }
 }
 
-/* Contenedor gris */
-.contenedor-gris {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 32px 0 rgba(8, 10, 34, 0.295);
-  width: 100%;
-  height: 300px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
-  padding: 20px 40px;
-  gap: 20px;
-}
-
-/* Columna izquierda (texto) */
-.texto-descriptivo {
-  flex: 1;
-  text-align: left;
-  color: #2e2e2e;
-  font-size: 1rem;
-  line-height: 1.5;
-  padding: 0 40px;
-}
-
-.texto-descriptivo h3 {
-  margin-bottom: 10px;
-  font-size: 4rem;
-  color: #ffffff;
-  font-family: "Oswald", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-/* Columna derecha (imagen) */
-.imagen-derecha {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.imagen-derecha img {
-  max-width: auto;
-  max-height: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-/* --- Versión móvil --- */
-@media (max-width: 768px) {
-  .contenedor-principal {
-    height: auto;
-    padding: 40px 0;
-  }
-
-  .contenedor-gris {
-    flex-direction: column;
-    text-align: center;
-    height: auto;
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .texto-descriptivo {
-    text-align: center;
-  }
-
-  .texto-descriptivo h3 {
-    font-size: 2rem;
-  }
-
-  .imagen-derecha img {
-    max-height: 200px;
-  }
+.scroll:hover div {
+  animation-play-state: paused;
 }
