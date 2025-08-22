@@ -9,10 +9,11 @@
     />
     <link rel="shortcut icon" href="../images/Logo.webp" type="image/x-icon" />
     <title>L&B | Nosotros</title>
+    <link rel="stylesheet" href="../assets/css/global.css" />
     <link rel="stylesheet" href="../assets/css/navbar.css" />
-    <link rel="stylesheet" href="../assets/css/footer.css" />
     <link rel="stylesheet" href="../assets/css/nosotros.css" />
-    <link rel="stylesheet" href="../assets/css/scroll.css" />
+    <link rel="stylesheet" href="../assets/css/cinta.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
 
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -69,15 +70,21 @@
 
     <!-- Hero -->
     <section class="hero-nosotros">
-      <div class="overlay"></div>
-      <div class="hero-content">
-        <h1>Conócenos</h1>
+      <div class="hero-card">
+        <h2 class="titulo-home text-center">
+          Conócenos y descubre nuestra
+          <span class="text-green">Historia</span>
+        </h2>
         <p>Comprometidos con calidad, innovación y sostenibilidad</p>
       </div>
     </section>
 
     <!-- Historia -->
     <section class="historia section-nosotros">
+      <h2 class="titulo-home text-center py-5">
+        Nuestra
+        <span class="text-green">Historia</span> <br />
+      </h2>
       <!-- Elementos decorativos -->
       <div class="decor-bg">
         <span></span>
@@ -97,11 +104,7 @@
             />
           </div>
           <div class="col-md-6">
-            <h2 class="titulo-home text-center py-5">
-              Nuestra
-              <span class="text-green">Historia</span>
-            </h2>
-            <h3><span>"Sin agricultores no hay comida"</span></h3>
+            <h3><span class="lema">"Sin agricultores no hay comida"</span></h3>
             <p>
               Somos una organización familiar fundada en 1994 por los esposos
               Luis Hernán Castillo y Betty Valdiviezo, quienes vienen de
@@ -127,7 +130,11 @@
         <div class="row text-center align-items-stretch">
           <!-- Misión -->
           <div class="col-md-6 mb-4 mb-md-0">
-            <div class="card-mv">
+            <div
+              class="card-mv"
+              style="background-image: url('../images/slider-3.webp')"
+            >
+              <div class="overlay"></div>
               <div class="icon-mv">
                 <i class="bx bx-bullseye icon-nosotros"></i>
               </div>
@@ -144,7 +151,11 @@
 
           <!-- Visión -->
           <div class="col-md-6">
-            <div class="card-mv">
+            <div
+              class="card-mv"
+              style="background-image: url('../images/slider-2.webp')"
+            >
+              <div class="overlay"></div>
               <div class="icon-mv">
                 <i class="bx bx-show icon-nosotros"></i>
               </div>
@@ -266,7 +277,9 @@
 
     <!-- cinta de provee -->
     <section id="nosotros" class="">
-      <h2 class="titulo-home text-center py-1">Nuestros Proveedores</h2>
+      <h2 class="titulo-home text-center mb-4">
+        Conoce a nuestros <span class="text-green">Proveedores</span>
+      </h2>
       <div class="scroll">
         <div>
           <img class="imgpro" src="../images/logoprovee/logo1.webp" alt="" />

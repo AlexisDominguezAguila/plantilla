@@ -18,3 +18,9 @@ body {
 .text-green {
   color: #69b517;
 }
+.lema {
+  font-size: 1.5rem;
+  color: #fe131e;
+  font-style: italic;
+  font-weight: 500;
+}
