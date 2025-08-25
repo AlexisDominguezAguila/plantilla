@@ -46,15 +46,27 @@
     .card:hover img {
       transform: scale(1.08);
     }
+
+    .sede-link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1em;
+    }
+
+    .sede-link:hover {
+      color: #137506;
+    }
+
     /* Responsive */
     @media (max-width: 900px) {
-      .container {
+      .containeri {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 600px) {
-      .container {
+      .containeri {
         grid-template-columns: 1fr;
+        max-width: 70%;
       }
     }
