@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/navbar.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
     <link rel="stylesheet" href="assets/css/cinta.css" />
+    <link rel="stylesheet" href="assets/css/chatbot.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -327,7 +328,32 @@
         </div>
       </div>
     </section>
+    <!-- Botón flotante del chatbot -->
+    <div class="chatbot-button" id="chatbotButton" aria-label="Abrir chatbot">
+      <img src="images/BotBoton.png" alt="Abrir chatbot" />
+    </div>
 
+    <!-- Modal del chatbot -->
+    <div class="chatbot-modal" id="chatbotModal">
+      <div class="chatbot-header">
+        <img src="images/botLyB.png" alt="Bot" class="bot-avatar" />
+        <span>Asistente L&B</span>
+        <button class="close-button" id="closeChatbot">&times;</button>
+      </div>
+      <div class="chatbot-messages" id="chatMessages">
+        <div class="message bot-message">
+          <img src="images/botLyB.png" class="message-avatar" alt="Bot" />
+          ¡Hola! Soy tu asistente virtual. ¿En qué puedo ayudarte hoy?
+        </div>
+      </div>
+      <div class="typing-indicator" id="typingIndicator">
+        <span class="typing-dot"></span>
+        <span class="typing-dot"></span>
+        <span class="typing-dot"></span>
+      </div>
+      <div class="chatbot-options" id="chatOptions"></div>
+    </div>
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer-container">
         <!-- Columna 1 -->
