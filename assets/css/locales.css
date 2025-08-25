@@ -46,19 +46,19 @@
 /* MAPA SUPERPUESTO */
 .map-overlay {
   position: absolute;
-  top: 40%;
+  top: 50%;
   right: 20px;
-  width: 400px; /* Ancho base en pantallas grandes */
-  aspect-ratio: 1 / 1; /* Mantiene el mapa cuadrado */
+  width: 400px;
+  aspect-ratio: 1 / 1;
   max-width: 35%;
   z-index: 4;
-  transform: translateY(-50%); /* Centrado vertical relativo */
+  transform: translateY(-50%);
 }
 
 .map-img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Mantiene proporción interna del mapa */
+  object-fit: contain;
 }
 
 /* PUNTOS DEL MAPA */
