@@ -169,9 +169,7 @@
         <div class="carousel-caption-custom">
           <span class="subtitulo">Sucursal</span>
           <h2 id="slide-title" class="titulo-sucursal">Principal - Piura</h2>
-          <a id="slide-link" href="#piura" class="btn btn-success"
-            >Ver Sucursal</a
-          >
+          <a id="slide-link" href="#piura" class="ver-sucursal">Ver Sucursal</a>
         </div>
 
         <!-- MAPA SUPERPUESTO -->
@@ -185,37 +183,37 @@
           <!-- Puntos del mapa -->
           <div
             class="map-point active"
-            style="top: 38%; left: 38%"
+            style="top: 47%; left: 37%"
             data-slide="0"
             title="Sucursal Principal - Piura"
           ></div>
           <div
             class="map-point"
-            style="top: 48%; left: 42%"
+            style="top: 60%; left: 41%"
             data-slide="1"
             title="Sucursal La Unión - Bajo Piura"
           ></div>
           <div
             class="map-point"
-            style="top: 28%; left: 48%"
+            style="top: 34%; left: 47%"
             data-slide="2"
             title="Sucursal Tambogrande"
           ></div>
           <div
             class="map-point"
-            style="top: 23%; left: 29%"
+            style="top: 29%; left: 27%"
             data-slide="3"
             title="Sucursal AV. Bns Aires - Sullana"
           ></div>
           <div
             class="map-point"
-            style="top: 15%; left: 37%"
+            style="top: 18%; left: 35%"
             data-slide="4"
             title="Sucursal Grau - Sullana"
           ></div>
           <div
             class="map-point"
-            style="top: 8%; left: 26%"
+            style="top: 9%; left: 23%"
             data-slide="5"
             title="Sucursal Santa Sofía - Ignacio Escudero"
           ></div>
@@ -509,6 +507,48 @@
           const index = parseInt(point.dataset.slide);
           carousel.to(index);
           updateActiveSlide(index);
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const slideLink = document.getElementById("slide-link");
+
+        slideLink.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          // Obtener el id del enlace (ej: "#piura")
+          const targetId = this.getAttribute("href").replace("#", "");
+          const targetCard = document.getElementById(targetId);
+
+          if (targetCard) {
+            // Scroll suave hacia la tarjeta
+            targetCard.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+
+            // Remover resaltado de otras tarjetas
+            document.querySelectorAll(".card").forEach((card) => {
+              card.classList.remove("active-highlight");
+            });
+
+            // Agregar borde verde neón
+            targetCard.classList.add("active-highlight");
+
+            // Quitar resaltado después de 3 segundos
+            setTimeout(() => {
+              targetCard.classList.remove("active-highlight");
+            }, 3000);
+          }
+        });
+
+        // Cambiar dinámicamente el href según el slide activo
+        const carousel = document.getElementById("heroCarousel");
+        carousel.addEventListener("slid.bs.carousel", () => {
+          const activeSlide = carousel.querySelector(".carousel-item.active");
+          const newLink = activeSlide.getAttribute("data-link");
+          slideLink.setAttribute("href", newLink);
         });
       });
     </script>
