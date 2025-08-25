@@ -34,12 +34,25 @@ function showProductDetails(id) {
     <div class="card shadow p-4">
       <div class="row g-4">
         <div class="col-md-5 text-center">
-          <img src="${product.imagen}" class="img-fluid rounded" alt="${product.nombre}" />
+          <img src="${product.imagen}" class="img-fluid rounded" alt="${
+    product.nombre
+  }" />
         </div>
         <div class="col-md-7">
           <h3 class="text-success">${product.nombre}</h3>
           <p>${product.descripcion}</p>
-          <button class="btn btn-secondary mt-3" id="back-to-list">Volver al catálogo</button>
+
+          <!-- Botones uno debajo del otro -->
+          <div class="d-flex flex-column align-items-start gap-2 mt-2">
+            ${
+              product.ficha
+                ? `<a href="${product.ficha}" target="_blank" class="btn btn-outline-success">
+                     📄 Ver ficha técnica
+                   </a>`
+                : ""
+            }
+            <button class="btn btn-secondary" id="back-to-list">Volver al catálogo</button>
+          </div>
         </div>
       </div>
     </div>

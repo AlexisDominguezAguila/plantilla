@@ -118,45 +118,39 @@ document.addEventListener("DOMContentLoaded", function () {
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
+  // 👉 Abrir modal
   chatbotButton.addEventListener("click", function (event) {
     event.stopPropagation();
     chatbotModal.style.display = "flex";
+    chatbotModal.classList.add("open");
+    chatbotButton.style.display = "none"; // ocultamos botón
     renderOptions();
   });
 
+  // 👉 Cerrar modal con botón X
   closeChatbot.addEventListener("click", function () {
     chatbotModal.style.display = "none";
+    chatbotModal.classList.remove("open");
+    chatbotButton.style.display = "flex"; // mostramos botón de nuevo
   });
 
+  // 👉 Evitar que click dentro cierre el modal
   chatbotModal.addEventListener("click", function (event) {
     event.stopPropagation();
   });
 
+  // 👉 Cerrar modal al hacer click afuera (y volver a mostrar botón)
   document.addEventListener("click", function (event) {
     if (
       !chatbotModal.contains(event.target) &&
-      event.target !== chatbotButton
+      event.target !== chatbotButton &&
+      chatbotModal.classList.contains("open")
     ) {
       chatbotModal.style.display = "none";
+      chatbotModal.classList.remove("open");
+      chatbotButton.style.display = "flex"; // volvemos a mostrar botón
     }
   });
 
   renderOptions();
-});
-const chatbotButton = document.querySelector(".chatbot-button");
-const chatbotModal = document.querySelector(".chatbot-modal");
-const closeButton = document.querySelector(".close-button");
-
-// Abrir modal
-chatbotButton.addEventListener("click", () => {
-  chatbotModal.style.display = "flex";
-  chatbotModal.classList.add("open");
-  chatbotButton.style.display = "none";
-});
-
-// Cerrar modal
-closeButton.addEventListener("click", () => {
-  chatbotModal.style.display = "none";
-  chatbotModal.classList.remove("open");
-  chatbotButton.style.display = "flex";
 });

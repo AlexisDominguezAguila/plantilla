@@ -1,53 +1,54 @@
-    .img-thumbnail-small {
-        width: 100px;
-        height: 70px;
-        object-fit: cover;
-        cursor: pointer;
-        }
-        .card-custom {
-        border: 1px solid #54e96d;
-        border-radius: 10px;
-        padding: 15px;
-        margin-bottom: 20px;
-        }
-        .btn-custom {
-        background-color: #00ff558b;
-        color: #000;
-        font-weight: bold;
-        border-radius: 25px;
-        padding: 12px 25px;
-        }
+.img-thumbnail-small {
+  width: 100px;
+  height: 70px;
+  object-fit: cover; /* recorta miniaturas */
+  cursor: pointer;
+}
 
-        .main-img {
-        max-height: 480px;   /* controla altura */
-        max-width: 100%;     /* respeta el ancho de col-7 */
-        object-fit: cover;   /* evita deformación */
-        }
+.card-custom {
+  border: 1px solid #54e96d;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.btn-custom {
+  background-color: #00ff558b;
+  color: #000;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 12px 25px;
+}
 
-    /* Miniaturas */
-        .thumb {
-        width: 90px;
-        height: 60px;
-        object-fit: cover;
-        cursor: pointer;
-        }
+/* Miniaturas */
+.thumb {
+  width: 90px;
+  height: 60px;
+  object-fit: cover; /* recorta miniaturas */
+  cursor: pointer;
+}
 
-        .conteni {
-        height: 480px;
-        overflow: hidden;
-        }
+.conteni {
+  height: 480px;
+  overflow: hidden;
+}
 
-        .genere {
-        height: 700px;
-        overflow: hidden;
-        }
+.genere {
+  height: 700px;
+  overflow: hidden;
+}
+.main-img {
+  width: 100%; /* ocupa todo el ancho */
+  height: 480px; /* fija la altura */
+  object-fit: cover; /* recorta la imagen si sobra */
+  border-radius: 8px; /* opcional, esquinas redondeadas */
+}
 
-        .titulo-home {
-        font-size: 3rem;
-        color: #66B511;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        }
-        .text-green {
-        color: #c9121c;
-        }
+.titulo-home {
+  font-size: 3rem;
+  color: #66b511;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.text-green {
+  color: #c9121c;
+}

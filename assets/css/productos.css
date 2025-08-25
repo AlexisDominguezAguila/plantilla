@@ -1,19 +1,60 @@
+/* Tarjetas en el listado */
 #product-list .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #e0e0e0;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 #product-list .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
+/* Tarjeta de detalles */
 #product-details .card {
-  border: 1px solid #e0e0e0;
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Botones de filtro */
+.filter-btn {
+  border: 1px solid #198754;
+  background-color: transparent;
+  color: #198754;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #198754;
+  color: #fff;
 }
 
 .filter-btn.active {
   background-color: #198754;
   color: #fff;
-  border: none;
+  border: 1px solid #198754;
+  box-shadow: 0 4px 10px rgba(25, 135, 84, 0.3);
+}
+
+#product-details .card .btn-link {
+  display: block; /* cada enlace en una nueva línea */
+  margin: 8px 0; /* separación entre enlaces */
+  font-weight: 500;
+  text-decoration: none; /* quitamos subrayado por defecto */
+  color: #198754; /* verde bootstrap */
+  transition: color 0.3s ease;
+}
+
+#product-details .card .btn-link:hover {
+  color: #145c32; /* tono más oscuro al pasar el mouse */
+  text-decoration: underline; /* efecto hover */
 }
