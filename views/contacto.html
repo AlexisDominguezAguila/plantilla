@@ -9,14 +9,16 @@
     />
     <link rel="shortcut icon" href="../images/Logo.webp" type="image/x-icon" />
     <title>L&B | Servicios</title>
+    <link rel="stylesheet" href="../assets/css/global.css" />
     <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/contacto.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <link rel="stylesheet" href="../assets/css/cinta.css" />
     <link rel="stylesheet" href="../assets/css/index.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
-    /> 
+    />
   </head>
   <body>
     <!-- Navbar -->
@@ -65,8 +67,55 @@
         </div>
       </div>
     </nav>
-    <main>
+    <main class="contact-section">
       <h1>Contacto</h1>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Ingresa tu nombre"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="correo">Correo electrónico</label>
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            placeholder="ejemplo@correo.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="+51 999 999 999"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="5"
+            placeholder="Escribe tu mensaje aquí..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+      </form>
     </main>
 
     <!-- cinta de provee -->
