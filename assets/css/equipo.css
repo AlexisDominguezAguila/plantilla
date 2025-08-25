@@ -1,57 +1,60 @@
-
-
-    .card {
-      position: relative;
-      width: 350px;
-      height: 250px;
-      overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-      cursor: pointer;
+    .containeri {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 por fila */
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto
     }
 
-    .card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-
-    .card:hover img {
-      transform: scale(1.1);
-    }
-
-    .card:hover .y {
-      transform: translateY(0);
-    }
-
-        .y {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(0, 53, 102, 0.9);
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-      transform: translateY(60%);
-      transition: transform 0.5s ease;
-    }
-
-    .y h3 {
+    .card h3 {
       margin: 0;
-      font-size: 18px;
-      font-weight: bold;
+      font-size: 1em;
     }
 
-    .y p {
-      margin-top: 10px;
-      font-size: 14px;
-      line-height: 1.4;
-      display: none;
+    .card p {
+      margin: 1px 0 0;
+      font-size: 1em;
+      line-height: 1;
     }
 
-    .card:hover .y p {
-      display: block;
+    /* Contenedor de la tarjeta */
+    .card {
+      border: 1px solid #000;
+      border-radius: 16px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #ffffff;
+    }
+
+    /* Imagen de la tarjeta */
+    .card img {
+      
+      transition: transform 0.4s ease;
+      height: 400px;
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    /* Hover de la tarjeta */
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Zoom suave en la imagen */
+    .card:hover img {
+      transform: scale(1.08);
+    }
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
     }
