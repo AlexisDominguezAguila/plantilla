@@ -143,3 +143,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   renderOptions();
 });
+const chatbotButton = document.querySelector(".chatbot-button");
+const chatbotModal = document.querySelector(".chatbot-modal");
+const closeButton = document.querySelector(".close-button");
+
+// Abrir modal
+chatbotButton.addEventListener("click", () => {
+  chatbotModal.style.display = "flex";
+  chatbotModal.classList.add("open");
+  chatbotButton.style.display = "none";
+});
+
+// Cerrar modal
+closeButton.addEventListener("click", () => {
+  chatbotModal.style.display = "none";
+  chatbotModal.classList.remove("open");
+  chatbotButton.style.display = "flex";
+});
