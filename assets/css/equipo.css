@@ -1,72 +1,89 @@
-    .containeri {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 por fila */
-      gap: 30px;
-      max-width: 1000px;
-      margin: 0 auto
-    }
+.containeri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-    .card h3 {
-      margin: 0;
-      font-size: 1em;
-    }
+.card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
 
-    .card p {
-      margin: 1px 0 0;
-      font-size: 1em;
-      line-height: 1;
-    }
+/* Efecto hover elegante */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
+}
 
-    /* Contenedor de la tarjeta */
-    .card {
-      border: 1px solid #000;
-      border-radius: 16px;
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background: #ffffff;
-    }
+/* Imagen con recorte redondeado superior */
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  transition: transform 0.4s ease;
+}
 
-    /* Imagen de la tarjeta */
-    .card img {
-      
-      transition: transform 0.4s ease;
-      height: 400px;
-      max-width: 100%;
-      object-fit: cover;
-    }
+.card:hover img {
+  transform: scale(1.05);
+}
 
-    /* Hover de la tarjeta */
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-    }
+/* Contenido */
+.card-content {
+  padding: 20px;
+}
 
-    /* Zoom suave en la imagen */
-    .card:hover img {
-      transform: scale(1.08);
-    }
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #222;
+}
 
-    .sede-link {
-    text-decoration: none;
-    color: inherit;
-    font-size: 1em;
-    }
+.card p {
+  margin: 5px 0;
+  font-size: 0.95em;
+  color: #555;
+}
 
-    .sede-link:hover {
-      color: #137506;
-    }
+/* Enlaces */
+.sede-link {
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #137506;
+  transition: color 0.3s ease;
+}
 
-    /* Responsive */
-    @media (max-width: 900px) {
-      .containeri {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
+.sede-link:hover {
+  color: #0a4703;
+}
 
-    @media (max-width: 600px) {
-      .containeri {
-        grid-template-columns: 1fr;
-        max-width: 70%;
-      }
-    }
+/* Celular destacado */
+.card-content p a {
+  color: #0b8f28;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card-content p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card img {
+    height: 250px;
+  }
+}
