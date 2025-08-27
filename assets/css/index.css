@@ -33,7 +33,7 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  height: 90%;
+  height: 100%;
   max-width: 1200px;
   text-align: left;
   background: rgba(0, 0, 0, 0.034);
@@ -311,12 +311,14 @@ section {
 
 .card-service {
   position: relative;
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   height: 370px;
   background-color: var(--color-bg-card);
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
+  margin: 0 auto;
 }
 
 /* Encabezado fijo */
